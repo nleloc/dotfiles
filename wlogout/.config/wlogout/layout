@@ -1,0 +1,30 @@
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+    "text" : "[L]ock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "killall -9 Hyprland",
+    "text" : "[E]xit Hypr",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "poweroff",
+    "text" : "Sh[u]tdown",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "reboot",
+    "text" : "[R]eboot",
+    "keybind" : "r"
+}
+{
+    "label" : "sleep",
+    "action" : "hyprlock & sleep 3 && systemctl sleep",
+    "text" : "[S]leep",
+    "keybind" : "s"
+}
