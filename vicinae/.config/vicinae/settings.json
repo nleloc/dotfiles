@@ -8,4 +8,25 @@
 //
 // Learn more about configuration at https://docs.vicinae.com/config
 
-{}
+{
+   "close_on_focus_loss": false,
+   "theme": {
+      "dark": {
+         "name": "tokyo-night"
+      }
+   },
+   "launcher_window": {
+      "opacity": 0.7,
+      "client_side_decorations": {
+         "enabled": true
+      },
+      "layer_shell": {
+         "keyboard_interactivity": "on_demand",
+         "enabled": false
+      }
+   },
+   "favorites": [
+      "core:search-emojis",
+      "clipboard:history"
+   ]
+}
