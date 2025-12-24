@@ -1,12 +1,12 @@
 {
     "label" : "lock",
-    "action" : "hyprlock",
+    "action" : "loginctl lock-session",
     "text" : "[L]ock",
     "keybind" : "l"
 }
 {
     "label" : "logout",
-    "action" : "killall -9 Hyprland",
+    "action" : "loginctl terminate-user",
     "text" : "[E]xit Hypr",
     "keybind" : "e"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "sleep",
-    "action" : "hyprlock & sleep 3 && systemctl sleep",
+    "action" : "loginctl lock-session && sleep 2 && systemctl sleep",
     "text" : "[S]leep",
     "keybind" : "s"
 }

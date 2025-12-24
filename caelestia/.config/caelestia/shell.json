@@ -296,7 +296,7 @@
                 "name": "Lock",
                 "icon": "lock",
                 "description": "Lock the current session",
-                "command": ["hyprlock"],
+                "command": ["loginctl", "lock-session"],
                 "enabled": true,
                 "dangerous": false
             },
@@ -344,7 +344,7 @@
     },
     "paths": {
         "mediaGif": "root:/assets/bongocat.gif",
-        "sessionGif": "root:/assets/kurukuru.gif",
+        "sessionGif": "~/dotfiles/misc/hpcd.gif",
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
     "services": {
