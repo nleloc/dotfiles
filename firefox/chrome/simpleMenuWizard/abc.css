@@ -1,0 +1,8 @@
+#context-visual-search::after,
+#star-button-box	{
+	display: none !important;
+}
+
+#identity-box.extensionPage #identity-icon-label {
+  visibility: collapse !important;
+}
