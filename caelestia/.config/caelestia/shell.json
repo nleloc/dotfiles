@@ -385,7 +385,7 @@
             "configLoaded": true,
             "dndChanged": true,
             "gameModeChanged": true,
-            "kbLayoutChanged": true,
+            "kbLayoutChanged": false,
             "numLockChanged": false,
             "nowPlaying": false
         }
