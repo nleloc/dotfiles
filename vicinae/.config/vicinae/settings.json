@@ -9,11 +9,21 @@
 // Learn more about configuration at https://docs.vicinae.com/config
 
 {
+   "$schema": "https://vicinae.com/schemas/config.json",
    "close_on_focus_loss": false,
+   "pop_on_backspace": true,
+   "activate_on_single_click": true,
+   "font": {
+      "rendering": "native",
+      "normal": {}
+   },
    "theme": {
       "dark": {
          "name": "tokyo-night"
       }
+   },
+   "telemetry": {
+      "system_info": false
    },
    "launcher_window": {
       "opacity": 0.7,
