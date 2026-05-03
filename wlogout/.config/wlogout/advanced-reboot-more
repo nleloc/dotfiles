@@ -1,0 +1,6 @@
+{
+    "label" : "archlinux",
+    "action" : "systemctl reboot --boot-loader-entry=linux-lts.conf --boot-loader-menu=1",
+    "text" : "[O] Arch Linux LTS",
+    "keybind" : "o"
+}
