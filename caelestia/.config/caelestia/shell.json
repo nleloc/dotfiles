@@ -242,6 +242,7 @@
   "dashboard": {
     "enabled": true,
     "showOnHover": false,
+    "showWeather": false,
     "mediaUpdateInterval": 500,
     "resourceUpdateInterval": 2000,
     "dragThreshold": 50,
@@ -534,7 +535,7 @@
   "services": {
     "weatherLocation": "",
     "useFahrenheit": false,
-    "useFahrenheitPerformance": true,
+    "useFahrenheitPerformance": false,
     "useTwelveHourClock": false,
     "gpuType": "",
     "visualiserBars": 45,
