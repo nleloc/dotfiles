@@ -8,14 +8,14 @@ echo "idc :D"
 echo ""
 sleep 2
 
+TS=$(date +%s)
+
 backupfn() {
-  mv caelestia caelestia_bak &>/dev/null
-  mv fastfetch fastfetch_bak &>/dev/null
-  mv fcitx5 fcitx5_bak &>/dev/null
-  mv hypr hypr_bak &>/dev/null
-  mv kitty kitty_bak &>/dev/null
-  mv nvim nvim_bak vicinae vicinae_bak &>/dev/null
-  mv wlogout wlogout_bak &>/dev/null
+  for app in caelestia fastfetch fcitx5 hypr kitty nvim vicinae wlogout; do
+    if [ -d "$app" ]; then
+      mv "$app" "${app}_bak_${TS}" &>/dev/null
+    fi
+  done
 }
 
 echo -n "Do you want to proceed? (y/N): "
@@ -28,12 +28,15 @@ if [[ $confirm != [yY] ]]; then
 fi
 
 wd=$HOME/.config/
-cd $wd
+cd "$wd" || {
+  echo "Directory $wd not found!"
+  exit 1
+}
 echo -n "Backup your current config? (Y/n): "
 read backup
 
 if [[ $backup != [nN] ]]; then
-  echo "Backing up, backup config folder would have _bak extension"
+  echo "Backing up, backup config folder will have _bak_$TS extension"
   backupfn # call backup function
   echo "Backup completed!"
 else
@@ -43,24 +46,36 @@ else
   if [[ $dbcheck == [yY] ]]; then
     echo "ok"
     echo "removing it"
-    rm -rf caelestia fastfetch fcitx5 hypr kitty nvim wlogout
+    rm -rf caelestia fastfetch fcitx5 hypr kitty nvim vicinae wlogout
   else
     backupfn # call backup function, nothing's better than backup :D
     echo "ok, i knew it"
   fi
 fi
 
-cd $HOME/dotfiles/
+cd "$HOME/dotfiles" || {
+  echo "dotfiles folder not found!"
+  exit 1
+}
 echo "ok"
-stow caelestia fastfetch fcitx5 hypr kitty nvim wlogout
 
-read -p "You want to apply my firefox userChome.css as well? (y/N)" ffcss
+echo "Applying dotfiles..."
+stow -t ~/.config caelestia fastfetch fcitx5 hypr kitty nvim wlogout
+
+read -p "You want to apply my firefox userChrome.css as well? (y/N): " ffcss
 if [[ $ffcss == [yY] ]]; then
-  echo "Okk"
-  echo "Backing up it"
-  pf_dir=$(find $HOME/.mozilla/firefox -name "*.default-release" | head -n 1)
-  mv $pf_dir/chrome $pf_dir/chrome_backup
-  ln -s $HOME/dotfiles/firefox/chrome $pf_dir/chrome
+  echo "okk, applying Firefox CSS"
+  pf_dir=$(find "$HOME/.mozilla/firefox" -maxdepth 1 -name "*.default-release" | head -n 1)
+
+  if [ -n "$pf_dir" ]; then
+    if [ -d "$pf_dir/chrome" ]; then
+      mv "$pf_dir/chrome" "$pf_dir/chrome_backup_$TS"
+    fi
+    ln -s "$HOME/dotfiles/firefox/chrome" "$pf_dir/chrome"
+    echo "Firefox CSS applied!"
+  else
+    echo "Firefox profile not found, skipped"
+  fi
 else
   echo "ok"
 fi
