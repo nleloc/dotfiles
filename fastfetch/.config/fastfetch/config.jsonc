@@ -1,124 +1,95 @@
-//    _____ _    ____ _____ _____ _____ _____ ____ _   _ 
-//   |  ___/ \  / ___|_   _|  ___| ____|_   _/ ___| | | |
-//   | |_ / _ \ \___ \ | | | |_  |  _|   | || |   | |_| |
-//   |  _/ ___ \ ___) || | |  _| | |___  | || |___|  _  |
-//   |_|/_/   \_\____/ |_| |_|   |_____| |_| \____|_| |_|
-//                                                     
-//  by Bina
-//  With my personal change :D
+// nleloc's
+//   _____ _____ _____ _____ _____ _____ _____ _____ _____ 
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__| 
+//
+//  Based on Bina's ff rice
 
-
-// execute with: fastfetch --colors-block-range-start 9 --colors-block-width 3
-
+                                                       
 {
-//    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-	"source": "~/dotfiles/misc/vo.png",
-        "padding": {
-            "top": 2,
-            "right": 6
-        }
+	    "source": "~/dotfiles/misc/wf.png",
+	    "type": "kitty",
+	    "height": 12,
+	    "padding": {
+		    "top": 2,
+        "left": 4,
+        "right": 4
+	    }
     },
     "display": {
         "separator": " ",
-	"color": {
-            "keys": "38;2;80;60;160",
-            "output": "38;2;180;170;225",
-	    "title": "38;2;80;60;160"
-	}
+        "color": {
+            "output": "38;5;153"
+        }
     },
     "modules": [
-	"break",
-	"break",
-
-	{
+        "break",
+        "break",
+        "break",
+        {
             "type": "title",
-            "keyWidth": 10
+            "keyWidth": 10,
+            "color": {
+                "user": "34",
+                "at": "38;5;111",
+                "host": "34"
+            }
         },
-//        "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────── Software ────────────────────┐"
+            "format": "\u001b[38;5;111m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m",
+            "keyColor": "34"
         },
-
         {
             "type": "os",
-            "key": " ",
-//            "keyColor": "purple"
+            "key": "~ OS",
+            "keyColor": "34",  // = color4
         },
-
-//        {
-//            "type": "os",
-//            "key": " ",
-//            "keyColor": "16"  // = color3
-//       },
-
         {
             "type": "kernel",
-            "key": "\u001b[90m│ ├─ \u001b[38;2;115;65;200m ",
-//            "keyColor": "35"
+            "key": "~ Kernel",
+            "keyColor": "34",
         },
         {
             "type": "packages",
-            "key": "\u001b[90m│ ├─ \u001b[38;2;115;65;200m ",
-//            "keyColor": "35"
+            "format": "{} (pacman)",
+            "key": "~ Packages",
+            "keyColor": "34",  
         },
-//	{
-//	    "type": "memory",
-//	    "format": "{used} / {total}",
-//	    "key": "🀰 ",
-//	    "keyColor": "35"
-//	},
+        {
+            "type": "shell",
+            "key": "~ Shell",
+            "keyColor": "34", 
+        },
+        {
+            "type": "terminal",
+            "key": "~ Terminal",
+            "keyColor": "34", 
+        },
         {
             "type": "wm",
-            "key": "\u001b[90m└ └─ \u001b[38;2;115;65;200m ",
-//            "keyColor": "35"
+            "key": "~ WM",
+            "keyColor": "34", 
         },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└──────────────────────────────────────────────────┘"
-        },
-	"break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────── Hardware ────────────────────┐"
-        },
-
-        {
-            "type": "host",
-            "key": " "
-        },
-
-	{
-	    "type": "cpu",
-	    "key": "\u001b[90m│ ├─ \u001b[38;2;115;65;200m ",
-	    "format": "{cores-physical} core(s) / {cores-logical} cores"
-	},
-	{
-	    "type": "memory",
-//	    "format": "{used} / {total}",
-	    "key": "\u001b[90m│ ├─ \u001b[38;2;115;65;200m🀰 ",
-//	    "keyColor": "35"
-	},
         {
             "type": "uptime",
-            "key": "\u001b[90m└ └─ \u001b[38;2;115;65;200m ",
-//            "keyColor": "35"
-        },
-
-        {
-            "type": "custom",
-            "format": "\u001b[90m└──────────────────────────────────────────────────┘"
+            "key": "~ UT",
+            "keyColor": "34", 
         },
         {
             "type": "media",
-	    "format": "{title}",
-            "key": "󰝚 "
-//            "keyColor": "35"
+            "key": "~ Playing",
+            "format": "{title}",
+            "keyColor": "34", 
         },
-        "break",
-        "colors",
-        "break",
+        {
+            "type": "player",
+            "key": "~ ~ From",
+            "keyColor": "34", 
+        },
         "break",
     ]
 }
