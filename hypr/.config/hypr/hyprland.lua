@@ -33,8 +33,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 16")
 	hl.exec_cmd("vicinae server & kitty")
-	hl.exec_cmd("qs -s caelestia")
 	hl.exec_cmd("fcitx5 & systemctl --user start hyprpolkitagent & amixer -c 0 set 'Internal Mic Boost' 22%")
+	hl.exec_cmd("qs -c caelestia")
 end)
 
 -- ==========================================
@@ -164,7 +164,7 @@ local mainMod = "SUPER"
 local fileManager = "pcmanfm"
 local terminal = "kitty"
 local browser = "firefox"
-local btmng = "blueman-manager"
+local btmng = "blueman-manager" -- bluetooth manager
 
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/dotfiles/misc/rqs.sh"))
 
