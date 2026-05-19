@@ -84,6 +84,9 @@ hl.config({
 			natural_scroll = false,
 		},
 	},
+	cursor = {
+		no_warps = false,
+	},
 })
 
 -- ==========================================
@@ -161,7 +164,7 @@ hl.config({
 
 local mainMod = "SUPER"
 
-local fileManager = "pcmanfm"
+local fileManager = "thunar"
 local terminal = "kitty"
 local browser = "firefox"
 local btmng = "blueman-manager" -- bluetooth manager
@@ -205,6 +208,11 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
+
+hl.bind(mainMod .. " + A", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + W", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ direction = "down" }))
 
 -- Sound
 --hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })

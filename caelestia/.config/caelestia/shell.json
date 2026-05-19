@@ -29,8 +29,8 @@
     },
     "transparency": {
       "enabled": true,
-      "base": 0.8531797680412369,
-      "layers": 0.35060244845360794
+      "base": 0.8,
+      "layers": 0.2
     }
   },
   "general": {
@@ -47,7 +47,7 @@
         "mpv"
       ],
       "explorer": [
-        "nemo"
+        "thunar"
       ]
     },
     "idle": {
@@ -56,19 +56,19 @@
       "timeouts": [
         {
           "idleAction": "lock",
-          "timeout": 180
+          "timeout": 300
         },
         {
           "idleAction": "dpms off",
           "returnAction": "dpms on",
-          "timeout": 300
+          "timeout": 420
         },
         {
           "idleAction": [
             "systemctl",
-            "suspend-then-hibernate"
+            "suspend"
           ],
-          "timeout": 600
+          "timeout": 900
         }
       ]
     },
@@ -101,17 +101,17 @@
     "enabled": true,
     "wallpaperEnabled": true,
     "desktopClock": {
-      "enabled": false,
+      "enabled": true,
       "scale": 1,
-      "position": "bottom-right",
+      "position": "top-right",
       "invertColors": false,
       "background": {
         "enabled": false,
-        "opacity": 0.7,
+        "opacity": 0.8,
         "blur": true
       },
       "shadow": {
-        "enabled": true,
+        "enabled": false,
         "opacity": 0.7,
         "blur": 0.4
       }
@@ -446,7 +446,7 @@
     "icons": {
       "logout": "logout",
       "shutdown": "power_settings_new",
-      "hibernate": "downloading",
+      "hibernate": "sleep",
       "reboot": "cached"
     },
     "commands": {
@@ -461,7 +461,7 @@
       ],
       "hibernate": [
         "systemctl",
-        "hibernate"
+        "suspend"
       ],
       "reboot": [
         "systemctl",
