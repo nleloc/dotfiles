@@ -18,8 +18,8 @@
 }
 {
     "label" : "reboot",
-    "action" : "wlogout -p layer-shell -b3 -c10 -l ~/.config/wlogout/advanced-reboot",
-    "text" : "[R]eboot to",
+    "action" : "reboot",
+    "text" : "[R]eboot",
     "keybind" : "r"
 }
 {

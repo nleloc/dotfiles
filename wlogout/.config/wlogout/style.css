@@ -78,24 +78,3 @@ Buttons
 	border-radius: 35px;
 	background-image: image (url("icons/cancel.png"));
 }
-
-/* Advanced reboot */
-#archlinux {
-  border-radius: 35px;
-  background-image: image (url("icons/archlinux.png"));
-}
-
-#archlts {
-  border-radius: 35px;
-  background-image: image (url("icons/archinux.png"));
-}
-
-#more {
-  border-radius: 35px;
-  background-image: image (url("icons/other.png"));
-}
-
-#windows {
-  border-radius: 35px;
-  background-image: image (url("icons/windows.png"));
-}
