@@ -5,6 +5,8 @@ EnumerateWithTriggerKeys=False
 ActivateKeys=
 # Deactivate Input Method
 DeactivateKeys=
+# Temporarily Toggle Input Method
+AltTriggerKeys=
 # Enumerate Input Method Forward
 EnumerateForwardKeys=
 # Enumerate Input Method Backward
@@ -31,9 +33,6 @@ ModifierOnlyKeyTimeout=250
 [Hotkey/TriggerKeys]
 0=Control+Alt+Shift+Alt_L
 1=Shift+Shift_R
-
-[Hotkey/AltTriggerKeys]
-0=Super+Super_L
 
 [Behavior]
 # Active By Default

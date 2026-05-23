@@ -65,13 +65,13 @@ stow -t ~/.config caelestia fastfetch fcitx5 hypr kitty nvim wlogout
 read -p "You want to apply my firefox userChrome.css as well? (y/N): " ffcss
 if [[ $ffcss == [yY] ]]; then
   echo "okk, applying Firefox CSS"
-  pf_dir=$(find "$HOME/.mozilla/firefox" -maxdepth 1 -name "*.default-release" | head -n 1)
+  pf_dir=$(find "$HOME/.config/mozilla/firefox" -maxdepth 1 -name "*.default-release" | head -n 1)
 
   if [ -n "$pf_dir" ]; then
     if [ -d "$pf_dir/chrome" ]; then
       mv "$pf_dir/chrome" "$pf_dir/chrome_backup_$TS"
     fi
-    ln -s "$HOME/dotfiles/firefox/chrome" "$pf_dir/chrome"
+    ln -s "$HOME/dotfiles/firefox/chrome" "$pf_dir"
     echo "Firefox CSS applied!"
   else
     echo "Firefox profile not found, skipped"
