@@ -8,7 +8,7 @@
 -- I don't have a fucking single knowledge about lua :))
 --
 
-require("config/animations")
+require("config/looknfeel")
 require("config/autostart")
 require("config/binds")
 require("config/environments")
