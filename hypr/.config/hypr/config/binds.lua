@@ -8,7 +8,7 @@ local mainMod = "SUPER"
 
 local fileManager = "thunar"
 local terminal = "kitty"
-local browser = "firefox"
+local browser = "floorp" -- a firefox fork
 local btmng = "blueman-manager" -- bluetooth manager
 
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/dotfiles/misc/rqs.sh"))
