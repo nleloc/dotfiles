@@ -15,7 +15,9 @@
    "activate_on_single_click": true,
    "font": {
       "rendering": "native",
-      "normal": {}
+      "normal": {
+         "family": "Comfy Feeling Viethoa"
+      }
    },
    "theme": {
       "dark": {
