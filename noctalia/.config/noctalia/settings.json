@@ -24,7 +24,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "kitty -e",
         "viewMode": "list"
     },
     "audio": {
@@ -80,12 +80,12 @@
             "center": [
                 {
                     "clockColor": "tertiary",
-                    "customFont": "Comfy Feeling Viethoa",
+                    "customFont": "Sans Serif",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
+                    "useCustomFont": true
                 }
             ],
             "left": [
@@ -150,7 +150,7 @@
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Network",
-                    "textColor": "none"
+                    "textColor": "primary"
                 }
             ]
         }
@@ -184,7 +184,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "ADW",
+        "predefinedScheme": "nlelocs-color",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -254,6 +254,11 @@
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "DP-2",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -301,7 +306,7 @@
         "clockFormat": "HH\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.45,
+        "dimmerOpacity": 0,
         "enableBlurBehind": false,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": true,
@@ -568,14 +573,14 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Sans Serif",
+        "fontDefault": "Comfy Feeling Viethoa",
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
-        "settingsPanelMode": "attached",
+        "settingsPanelMode": "window",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
         "translucentWidgets": true
