@@ -25,13 +25,23 @@ hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -m active -o ~/Pictures/Scr
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region -z -o ~/Pictures/Screenshots/"))
 
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("caelestia shell drawers toggle dashboard")) -- Caelestia
-hl.bind(mainMod .. " + SUPER_R", hl.dsp.exec_cmd("caelestia shell drawers toggle launcher"))
+-- Bind both super
+local function bindBothSuper(mod, action)
+	hl.bind(mod .. "+ SUPER_L", action)
+	hl.bind(mod .. "+ SUPER_R", action)
+end
+
+-- Use both SUPER key to call Noctalia CC
+bindBothSuper(mainMod, hl.dsp.exec_cmd("qs -c noctalia-shell ipc call controlCenter toggle"))
+
+--hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call controlCenter toggle")) -- Use only left SUPER
+
+hl.bind(mainMod .. " + Menu", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
 
 hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + F12", hl.dsp.dpms({ action = "on" }))

@@ -11,7 +11,7 @@ sleep 2
 TS=$(date +%s)
 
 backupfn() {
-  for app in caelestia fastfetch fcitx5 hypr kitty nvim vicinae wlogout; do
+  for app in noctalia fastfetch fcitx5 hypr kitty nvim vicinae wlogout; do
     if [ -d "$app" ]; then
       mv "$app" "${app}_bak_${TS}" &>/dev/null
     fi
@@ -46,7 +46,7 @@ else
   if [[ $dbcheck == [yY] ]]; then
     echo "ok"
     echo "removing it"
-    rm -rf caelestia fastfetch fcitx5 hypr kitty nvim vicinae wlogout
+    rm -rf noctalia fastfetch fcitx5 hypr kitty nvim vicinae wlogout
   else
     backupfn # call backup function, nothing's better than backup :D
     echo "ok, i knew it"
@@ -62,6 +62,7 @@ echo "ok"
 echo "Applying dotfiles..."
 stow -t ~/.config caelestia fastfetch fcitx5 hypr kitty nvim wlogout
 
+echo "You should skip this step tbh"
 read -p "You want to apply my firefox userChrome.css as well? (y/N): " ffcss
 if [[ $ffcss == [yY] ]]; then
   echo "okk, applying Firefox CSS"

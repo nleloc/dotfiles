@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "loginctl lock-session",
+    "action" : "qs -c noctalia-shell ipc call lockScreen lock",
     "text" : "[L]ock",
     "keybind" : "l"
 }

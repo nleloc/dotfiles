@@ -11,5 +11,5 @@ hl.on("hyprland.start", function()
 	hl.dispatch(hl.dsp.cursor.move({ x = 1093, y = 576 }))
 	--
 	hl.exec_cmd("fcitx5 & systemctl --user start hyprpolkitagent & amixer -c 0 set 'Internal Mic Boost' 53%")
-	hl.exec_cmd("qs -c caelestia")
+	hl.exec_cmd("qs -c noctalia-shell")
 end)
