@@ -8,4 +8,4 @@ done
 qs -c noctalia-shell &
 disown
 
-exit
+exit 0

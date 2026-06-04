@@ -11,7 +11,8 @@ local terminal = "kitty"
 local browser = "floorp" -- a firefox fork
 local btmng = "blueman-manager" -- bluetooth manager
 
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/dotfiles/misc/rqs.sh"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/dotfiles/misc/rqs.sh")) -- Restart quickshell
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("~/dotfiles/misc/rpa.sh")) -- Restart pipewire audio
 
 --hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
