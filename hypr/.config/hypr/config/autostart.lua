@@ -10,6 +10,7 @@ hl.on("hyprland.start", function()
 	-- don't ask me why about this
 	hl.dispatch(hl.dsp.cursor.move({ x = 1093, y = 576 }))
 	--
-	hl.exec_cmd("fcitx5 & systemctl --user start hyprpolkitagent & amixer -c 0 set 'Internal Mic Boost' 53%")
+	hl.exec_cmd("fcitx5 & /usr/lib/hyprpolkitagent/hyprpolkitagent & amixer -c 0 set 'Internal Mic Boost' 53%")
 	hl.exec_cmd("qs -c noctalia-shell")
+	hl.exec_cmd("pipewire & wireplumber & pipewire-pulse")
 end)

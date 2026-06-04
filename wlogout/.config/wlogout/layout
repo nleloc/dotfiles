@@ -24,7 +24,7 @@
 }
 {
     "label" : "sleep",
-    "action" : "loginctl lock-session && sleep 2 && systemctl sleep",
+    "action" : "qs -c noctalia-shell ipc call lockScreen lock && sleep 2 && loginctl suspend",
     "text" : "[S]leep",
     "keybind" : "s"
 }
