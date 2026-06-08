@@ -11,6 +11,8 @@
 * Vicinae
 * Fcitx5
 * Firefox
+* Fonts
+* Dinit
 
 ## That's it
 <br>

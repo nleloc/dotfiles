@@ -6,7 +6,7 @@
 
 local mainMod = "SUPER"
 
-local fileManager = "thunar"
+local fileManager = "dbus-run-session thunar"
 local terminal = "kitty"
 local browser = "floorp" -- a firefox fork
 local btmng = "blueman-manager" -- bluetooth manager
