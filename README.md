@@ -1,18 +1,20 @@
 # My trash dotfiles
 ## Included shit for:
-* Hyprbug
-* Noctalia
-* Fastfetch
-* Wlogout
+- **Hyprbug**
+- **Noctalia**
+- **Fastfetch**
+- **Wlogout**
 
-## And some shit I just push here to backup
-* Nvim (lazyvim)
-* Kitty
-* Vicinae
-* Fcitx5
-* Firefox
-* Fonts
-* Dinit
+## And some shi I just push here to backup
+- **Nvim** (lazyvim)
+- **Kitty**
+- **Vicinae**
+- **Fcitx5**
+- **Firefox**
+- **Fonts**
+- **Dinit** (idk, don't use it)
+- **Applications** (idk)
+
 
 ## That's it
 <br>

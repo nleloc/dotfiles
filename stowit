@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "idk"
-read -p "Enter config name to stow: " stow
-
-mkdir -p ~/dotfiles/$stow/.config
-mv ~/.config/$stow ~/dotfiles/$stow/.config/
-
-stow $stow

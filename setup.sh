@@ -18,6 +18,8 @@ backupfn() {
   done
 }
 
+echo "I've never tested this btw :D"
+echo "u should stow yourself"
 echo -n "Do you want to proceed? (y/N): "
 read confirm
 
