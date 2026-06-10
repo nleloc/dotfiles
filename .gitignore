@@ -1,4 +1,8 @@
 # Skip backing up scheme folder
 hypr/.config/hypr/scheme/
+
 applications/.local/share/applications/*
 !applications/.local/share/applications/nvim-with-kitty.desktop
+
+fakesudo/*
+!fakesudo/PKGBUILD

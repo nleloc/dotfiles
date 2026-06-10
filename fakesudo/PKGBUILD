@@ -1,0 +1,7 @@
+pkgname=sudo
+pkgver=99999367
+pkgrel=1
+pkgdesc="A dummy sudo package. Idk, why did you ask me"
+arch=('any')
+provides=('sudo')
+conflicts=('sudo')

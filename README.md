@@ -1,4 +1,5 @@
-# My trash dotfiles
+# My trash dotfiles (not mine tbh)
+- This repo contain lots of random trash for no reason
 ## Included shit for:
 - **Hyprbug**
 - **Noctalia**
