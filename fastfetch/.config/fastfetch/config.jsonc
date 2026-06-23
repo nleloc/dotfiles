@@ -10,11 +10,11 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-	    "source": "~/dotfiles/misc/wf.png",
+	    "source": "~/dotfiles/misc/vtds.png",
 	    "type": "kitty",
-	    "height": 12,
+	    "height": 10,
 	    "padding": {
-		    "top": 2,
+		    "top": 3,
         "left": 4,
         "right": 4
 	    }
