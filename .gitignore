@@ -6,3 +6,5 @@ applications/.local/share/applications/*
 
 fakesudo/*
 !fakesudo/PKGBUILD
+
+fcitx5/.config/fcitx5/conf/cached_layouts
