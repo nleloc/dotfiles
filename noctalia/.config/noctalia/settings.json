@@ -151,6 +151,41 @@
                     "iconColor": "none",
                     "id": "Network",
                     "textColor": "primary"
+                },
+                {
+                    "colorizeSystemIcon": "error",
+                    "colorizeSystemText": "none",
+                    "generalTooltipText": "mmb",
+                    "hideMode": "alwaysExpanded",
+                    "icon": "power",
+                    "iconPosition": "left",
+                    "id": "CustomButton",
+                    "ipcIdentifier": "",
+                    "leftClickExec": "killall wlogout ; wlogout -b5 -c10",
+                    "leftClickUpdateText": true,
+                    "maxTextLength": {
+                        "horizontal": 10,
+                        "vertical": 10
+                    },
+                    "middleClickExec": "killall wlogout ; wlogout -b5 -c10",
+                    "middleClickUpdateText": false,
+                    "parseJson": false,
+                    "rightClickExec": "killall wlogout ; wlogout -b5 -c10",
+                    "rightClickUpdateText": false,
+                    "showExecTooltip": false,
+                    "showIcon": true,
+                    "showTextTooltip": false,
+                    "textCollapse": "",
+                    "textCommand": "",
+                    "textIntervalMs": 3000,
+                    "textStream": false,
+                    "wheelDownExec": "",
+                    "wheelDownUpdateText": false,
+                    "wheelExec": "",
+                    "wheelMode": "unified",
+                    "wheelUpExec": "",
+                    "wheelUpUpdateText": false,
+                    "wheelUpdateText": false
                 }
             ]
         }
