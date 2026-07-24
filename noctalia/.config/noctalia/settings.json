@@ -451,10 +451,10 @@
         "autoSchedule": false,
         "dayTemp": "6500",
         "enabled": true,
-        "forced": false,
+        "forced": true,
         "manualSunrise": "05:30",
         "manualSunset": "18:30",
-        "nightTemp": "5018"
+        "nightTemp": "5092"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
