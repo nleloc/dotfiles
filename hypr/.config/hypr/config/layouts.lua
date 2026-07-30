@@ -3,11 +3,6 @@
 -- ==========================================
 --                 Layouts
 -- ==========================================
-hl.config({
-	dwindle = {
-		preserve_split = true,
-	},
-})
 
 -- For Noctalia shell to show persistent workspace
 for i = 1, 5 do
