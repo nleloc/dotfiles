@@ -25,8 +25,11 @@ hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("killall wlogout ; wlogout -b5 -
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -m active -o ~/Pictures/Screenshots/"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region -z -o ~/Pictures/Screenshots/"))
 
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(mainMod .. " + ALT + F", hl.dsp.window.float({ action = "toggle" }))
+--hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.layout("colresize 1"))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.layout("colresize 0.6"))
+
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d ' pid:' | xargs kill -9"))
