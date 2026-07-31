@@ -9,13 +9,13 @@ hl.config({
 		kb_rules = "",
 
 		numlock_by_default = true,
-		follow_mouse = 1,
+		follow_mouse = 0,
 
 		touchpad = {
 			natural_scroll = false,
 		},
 	},
 	cursor = {
-		no_warps = false,
+		no_warps = true,
 	},
 })
