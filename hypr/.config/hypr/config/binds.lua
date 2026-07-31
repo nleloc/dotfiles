@@ -75,10 +75,43 @@ hl.bind(mainMod .. " + D", hl.dsp.layout("move +col"))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.layout("swapcol l"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.layout("swapcol r"))
 
+hl.bind(mainMod .. " + TAB", hl.dsp.layout("focus r"))
+hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.layout("focus l"))
+
 hl.bind(mainMod .. " + W", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.move({ workspace = "-1" }))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "+1" }))
+
+-- Focus first / last workspace has window
+local function focus_workspace_custom_fn(where)
+	local workspaces = hl.get_workspaces()
+	local targetId = (where == "first") and math.huge or -math.huge
+	local targetWs = nil
+
+	for _, ws in ipairs(workspaces) do
+		if ws.windows > 0 then
+			if where == "first" and ws.id < targetId then
+				targetId = ws.id
+				targetWs = ws
+			elseif where == "last" and ws.id > targetId then
+				targetId = ws.id
+				targetWs = ws
+			end
+		end
+	end
+
+	if targetWs then
+		hl.dispatch(hl.dsp.focus({ workspace = targetWs.id }))
+	end
+end
+
+hl.bind(mainMod .. " + PAGE_UP", function()
+	focus_workspace_custom_fn("first")
+end)
+hl.bind(mainMod .. " + PAGE_DOWN", function()
+	focus_workspace_custom_fn("last")
+end)
 
 -- Sound
 --hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
