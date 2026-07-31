@@ -5,7 +5,7 @@
 -- ==========================================
 
 -- For Noctalia shell to show persistent workspace
-for i = 1, 5 do
+for i = 1, 3 do
 	hl.workspace_rule({
 		workspace = tostring(i),
 		persistent = true,
