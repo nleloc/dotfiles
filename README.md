@@ -1,5 +1,6 @@
 # My trash dotfiles (not mine tbh)
 - This repo contain lots of random trash for no reason
+- Just run `stow` yourself, im too lazy ;)
 ## Included shit for:
 - **Hyprbug**
 - **Noctalia**
