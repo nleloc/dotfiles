@@ -4,6 +4,10 @@
 --                 Binds
 -- ==========================================
 
+-- Misc script (in ../misc_script.lua)
+
+local misc_script = require("misc_script")
+
 local mainMod = "SUPER"
 
 local fileManager = "dbus-run-session thunar"
@@ -11,8 +15,8 @@ local terminal = "kitty"
 local browser = "floorp" -- a firefox fork
 local btmng = "blueman-manager" -- bluetooth manager
 
-hl.bind(mainMod .. " + ALT + W", hl.dsp.exec_cmd("~/dotfiles/misc/rqs.sh")) -- Restart quickshell
-hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd("~/dotfiles/misc/rpa.sh")) -- Restart pipewire audio
+hl.bind(mainMod .. " + ALT + W", misc_script.rs_quickshell()) -- Restart quickshell
+hl.bind(mainMod .. " + ALT + P", misc_script.rs_pipewire()) -- Restart pipewire audio
 
 --hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
