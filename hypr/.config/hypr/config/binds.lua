@@ -34,7 +34,7 @@ hl.bind(mainMod .. " + ALT + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.layout("colresize 1"))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.layout("colresize 0.6"))
 
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session lock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d ' pid:' | xargs kill -9"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
@@ -50,11 +50,11 @@ local function bindBothSuper(mod, action)
 end
 
 -- Use both SUPER key to call Noctalia CC
-bindBothSuper(mainMod, hl.dsp.exec_cmd("qs -c noctalia-shell ipc call controlCenter toggle"))
+bindBothSuper(mainMod, hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
 
 --hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call controlCenter toggle")) -- Use only left SUPER
 
-hl.bind(mainMod .. " + Menu", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
+hl.bind(mainMod .. " + Menu", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
 
 hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + F12", hl.dsp.dpms({ action = "on" }))

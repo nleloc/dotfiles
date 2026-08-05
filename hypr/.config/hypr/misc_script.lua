@@ -10,9 +10,9 @@ local M = {}
 function M.rs_quickshell()
 	return hl.dsp.exec_cmd([[
         bash -c '
-        killall -q qs quickshell wlsunset
-        while pgrep -u $USER -x "qs|quickshell|wlsunset" >/dev/null; do sleep 0.2; done
-        qs -c noctalia-shell &
+        killall -q noctalia
+        while pgrep -u $USER -x "noctalia" >/dev/null; do sleep 0.1; done
+        noctalia &
         disown -a
         '
     ]])
