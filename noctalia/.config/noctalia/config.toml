@@ -1,18 +1,15 @@
-# i took this config in ~/.local/state/noctalia/settings.toml, change a few lines and put it here :D
-config_version = 8
-
 [accessibility]
-ui_scale = 1.05
+ui_scale = 1.0500000081956387
 
 [bar.default]
-background_opacity = 0.65
+background_opacity = 0.64999998547136784
 end = [ "tray", "group:g2", "group:g1" ]
 layer = "top"
 margin_ends = 0
 position = "left"
 radius_bottom_left = 0
 radius_top_left = 0
-scale = 1.2
+scale = 1.2000000104308128
 shadow = false
 start = [ "workspaces", "media" ]
 thickness = 45
@@ -22,7 +19,7 @@ thickness = 45
     fill = "hover"
     id = "g1"
     members = [ "battery", "volume", "session" ]
-    opacity = 0.35
+    opacity = 0.34999999403953552
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -30,7 +27,7 @@ thickness = 45
     fill = "hover"
     id = "g2"
     members = [ "network", "bluetooth" ]
-    opacity = 0.35
+    opacity = 0.34999999403953552
     padding = 6.0
 
 [control_center]
@@ -39,8 +36,27 @@ hidden_tabs = [ "monitor", "weather", "screen-time" ]
 [desktop_widgets]
 enabled = false
 
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 30
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 270.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 540.0
+
 [location]
-address = ""
+address = "Vietnam"
 custom_schedule = true
 sunrise = "07:30"
 sunset = "20:45"
@@ -49,7 +65,7 @@ sunset = "20:45"
 enabled = true
 schema_version = 2
 widget_order = [
-    "lockscreen-login-box",
+    "lockscreen-login-box@DP-2",
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000004",
     "lockscreen-widget-0000000000000006"
@@ -60,7 +76,7 @@ widget_order = [
     major_interval = 4
     visible = true
 
-    [lockscreen_widgets.widget."lockscreen-login-box"]
+    [lockscreen_widgets.widget.lockscreen-login-box]
     box_height = 128.0
     box_width = 720.0
     cx = 683.0
@@ -68,9 +84,18 @@ widget_order = [
     rotation = 0.0
     type = "login_box"
 
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 128.0
+    box_width = 720.0
+    cx = 683.0
+    cy = 480.0
+    output = "DP-2"
+    rotation = 0.0
+    type = "login_box"
+
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
         background_color = "surface_variant"
-        background_opacity = 0.7
+        background_opacity = 0.70000000000000007
         background_radius = 12.0
         center_password_text = true
         input_opacity = 1.0
@@ -89,13 +114,14 @@ widget_order = [
     box_width = 608.0
     cx = 683.0
     cy = 144.0
+    output = "DP-2"
     rotation = 0.0
     type = "clock"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.3
+        background_opacity = 0.29999999999999999
         background_padding = 20
         background_radius = 20
         center_text = true
@@ -110,6 +136,7 @@ widget_order = [
     box_width = 192.0
     cx = 683.0
     cy = 72.0
+    output = "DP-2"
     rotation = 0.0
     type = "clock"
 
@@ -125,6 +152,7 @@ widget_order = [
     box_width = 416.0
     cx = 1147.0
     cy = 672.0
+    output = "DP-2"
     rotation = 0.0
     type = "media_player"
 
@@ -148,6 +176,7 @@ show_location = false
 
 [theme]
 community_palette = "Atuel"
+custom_palette = "nlelocs-color"
 source = "community"
 
     [theme.templates]
@@ -159,11 +188,15 @@ directory = "/home/nleloc/Pictures/Wallpapers"
 
     [wallpaper.default]
     path = "/home/nleloc/Pictures/Wallpapers/aaaa-e.jpg"
+
+    [wallpaper.last]
+    path = "/home/nleloc/Pictures/Wallpapers/aaaa-e.jpg"
+
 [weather]
 enabled = false
 
 [widget.clock]
-scale = 1.35
+scale = 1.3500000000000001
 
 [widget.network]
 show_label = false
@@ -173,7 +206,7 @@ vpn_status = "both"
 show_label = false
 
 [widget.workspaces]
-active_pill_size = 2.8
+active_pill_size = 2.8000000000000003
 display = "name"
 labels_only_when_occupied = true
-pill_scale = 0.95
+pill_scale = 0.95000000000000007
