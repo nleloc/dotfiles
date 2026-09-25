@@ -28,3 +28,6 @@ hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 -- Misc
 hl.env("APPIMAGELAUNCHER_DISABLE", "1")
 hl.env("OZONE_PLATFORM", "wayland")
+
+-- Path
+hl.env("PATH", os.getenv("HOME") .. "/.local/bin:" .. os.getenv("PATH"))
