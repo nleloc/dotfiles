@@ -1,10 +1,21 @@
-# Skip backing up scheme folder
+# skip backing up scheme folder
 hypr/.config/hypr/scheme/
 
+# yeah im too lazy to rewrite that every single time reinstalling
 applications/.local/share/applications/*
 !applications/.local/share/applications/nvim-with-kitty.desktop
 
+# :nerd:
 fakesudo/*
 !fakesudo/PKGBUILD
 
+# fcitx5's cached_layout
 fcitx5/.config/fcitx5/conf/cached_layouts
+
+# fonts
+fonts/.fonts/*
+!fonts/.fonts/*/
+!fonts/.fonts/**/*.ttf
+!fonts/.fonts/**/*.otf
+!fonts/.fonts/**/*.woff
+!fonts/.fonts/**/*.woff2
