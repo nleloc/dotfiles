@@ -11,9 +11,14 @@
 {
    "$schema": "https://vicinae.com/schemas/config.json",
    "close_on_focus_loss": false,
+   "consider_preedit": false,
    "pop_to_root_on_close": true,
    "pop_on_backspace": true,
    "activate_on_single_click": true,
+   "encrypt_sensitive_data": true,
+   "tray": {
+      "enabled": false
+   },
    "font": {
       "rendering": "native",
       "normal": {
@@ -41,5 +46,14 @@
    "favorites": [
       "core:search-emojis",
       "clipboard:history"
-   ]
+   ],
+   "providers": {
+      "core": {
+         "entrypoints": {
+            "search-tray": {
+               "enabled": true
+            }
+         }
+      }
+   }
 }
