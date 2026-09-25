@@ -207,6 +207,7 @@ show_label = false
 
 [widget.workspaces]
 active_pill_size = 2.8000000000000003
-display = "name"
+label_source = "name"
+show_labels = true
 labels_only_when_occupied = true
 pill_scale = 0.95000000000000007
