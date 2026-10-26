@@ -41,7 +41,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("consume_or_expel prev"))
 
 -- idk
-hl.bind(mainMod .. " + M", hl.dsp.cursor.move({ x = 1093, y = 576 }))
+hl.bind(mainMod .. " + M", hl.dsp.cursor.move({ x = 1150, y = 600 }))
 
 -- Bind both super
 local function bindBothSuper(mod, action)
