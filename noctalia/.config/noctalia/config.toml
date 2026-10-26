@@ -61,6 +61,9 @@ custom_schedule = true
 sunrise = "07:30"
 sunset = "20:45"
 
+[lockscreen]
+blur_intensity = 0.099999997764825821
+
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
@@ -68,7 +71,10 @@ widget_order = [
     "lockscreen-login-box@DP-2",
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000004",
-    "lockscreen-widget-0000000000000006"
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000008",
+    "lockscreen-widget-0000000000000009"
 ]
 
     [lockscreen_widgets.grid]
@@ -85,11 +91,13 @@ widget_order = [
     type = "login_box"
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-    box_height = 128.0
-    box_width = 720.0
+    box_height = 70.0
+    box_width = 400.0
     cx = 683.0
-    cy = 480.0
+    cy = 688.0
     output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "login_box"
 
@@ -100,11 +108,12 @@ widget_order = [
         center_password_text = true
         input_opacity = 1.0
         input_radius = 6.0
-        layout = "regular"
+        layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
-        show_login_button = true
+        show_login_button = false
         show_media = false
+        show_password_reveal = false
         show_session_buttons = true
         show_unlock_hint = false
         show_weather = false
@@ -115,6 +124,8 @@ widget_order = [
     cx = 683.0
     cy = 144.0
     output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "clock"
 
@@ -126,7 +137,7 @@ widget_order = [
         background_radius = 20
         center_text = true
         clock_style = "digital"
-        color = "error"
+        color = "on_surface_variant"
         font_family = "Cascadia Code"
         format = "{:%H:%M:%S}"
         shadow = false
@@ -137,6 +148,8 @@ widget_order = [
     cx = 683.0
     cy = 72.0
     output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "clock"
 
@@ -148,11 +161,13 @@ widget_order = [
         shadow = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
-    box_height = 160.0
-    box_width = 416.0
-    cx = 1147.0
-    cy = 672.0
+    box_height = 128.0
+    box_width = 288.0
+    cx = 155.0
+    cy = 80.0
     output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "media_player"
 
@@ -163,11 +178,63 @@ widget_order = [
         hide_when_no_media = true
         shadow = false
 
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1328.0999755859375
+    cy = 730.9000244140625
+    output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
+    rotation = 0.0
+    type = "button"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+        background = true
+        command = "loginctl poweroff"
+        glyph = "power"
+        variant = "default"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1328.0999755859375
+    cy = 674.0999755859375
+    output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
+    rotation = 0.0
+    type = "button"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background = true
+        command = "loginctl reboot"
+        glyph = "reboot"
+        variant = "default"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1328.0999755859375
+    cy = 613.0999755859375
+    output = "DP-2"
+    placement_height = 768.0
+    placement_width = 1366.0
+    rotation = 0.0
+    type = "button"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
+        background = true
+        command = "loginctl suspend"
+        glyph = "weather-moon"
+        variant = "default"
+
 [nightlight]
 enabled = true
 temperature_day = 5400
 
 [shell]
+avatar_path = "/home/nleloc/uwauuuuuuuu.png"
 font_family = "Comfy Feeling Viethoa"
 show_location = false
 
@@ -187,10 +254,13 @@ source = "community"
 directory = "/home/nleloc/Pictures/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/nleloc/Pictures/Wallpapers/aaaa-e.jpg"
+    path = "/home/nleloc/Pictures/Wallpapers/iuuuuuuuuuuuuuuuuuuuuu.jpg"
 
     [wallpaper.last]
-    path = "/home/nleloc/Pictures/Wallpapers/aaaa-e.jpg"
+    path = "/home/nleloc/Pictures/Wallpapers/iuuuuuuuuuuuuuuuuuuuuu.jpg"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/nleloc/Pictures/Wallpapers/iuuuuuuuuuuuuuuuuuuuuu.jpg"
 
 [weather]
 enabled = false
@@ -208,6 +278,6 @@ show_label = false
 [widget.workspaces]
 active_pill_size = 2.8000000000000003
 label_source = "name"
-show_labels = true
 labels_only_when_occupied = true
 pill_scale = 0.95000000000000007
+show_labels = true
