@@ -45,8 +45,8 @@ hl.bind(mainMod .. " + M", hl.dsp.cursor.move({ x = 1150, y = 600 }))
 
 -- Bind both super
 local function bindBothSuper(mod, action)
-	hl.bind(mod .. "+ SUPER_L", action)
-	hl.bind(mod .. "+ SUPER_R", action)
+	hl.bind(mod .. "+ SUPER_L", action, { release = true })
+	hl.bind(mod .. "+ SUPER_R", action, { release = true })
 end
 
 -- Use both SUPER key to call Noctalia CC
