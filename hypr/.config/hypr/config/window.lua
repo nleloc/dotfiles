@@ -6,7 +6,7 @@
 
 -- no VSync for fullscreen app
 hl.window_rule({
-  match = { fullscreen = true },
+  match = { fullscreen_state_internal = 2 },
   immediate = true
 })
 
